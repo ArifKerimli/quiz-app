@@ -1,0 +1,143 @@
+$dark: #1e1e1e;
+$light-gray: rgba(0, 0, 0, 0.03);
+$white: #fff;
+$green: #80cd91;
+$dark-green: #5fb371;
+$danger: #dc3545;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 30rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid $light-gray;
+  .submit {
+    padding: 0.5rem 2rem;
+    background-color: $dark-green;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $white;
+    border-radius: 0.25rem;
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    -ms-border-radius: 0.25rem;
+    -o-border-radius: 0.25rem;
+    transition: 300ms all ease-in-out;
+    border: none;
+
+    &:hover {
+      background-color: $green;
+    }
+  }
+
+  h3,
+  p {
+    color: $dark-green;
+    text-align: center;
+  }
+
+  .variants {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    span {
+      padding: 1rem;
+      width: 100%;
+      margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+      color: $dark-green;
+      text-decoration: none;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.1rem;
+      border-radius: 0.25rem;
+      transition: 300ms all ease-in-out;
+      background-color: $light-gray;
+      cursor: pointer;
+    }
+
+    .correct {
+      background-color: rgba($color: $dark-green, $alpha: 0.1);
+      border: 1px solid rgba($color: $dark-green, $alpha: 0.4);
+
+      &:hover {
+        background-color: rgba($color: $dark-green, $alpha: 0.1);
+      }
+    }
+    .false {
+      background-color: rgba($color: $danger, $alpha: 0.1);
+      color: $danger;
+      border: 1px solid rgba($color: $danger, $alpha: 0.4);
+
+      &:hover {
+        background-color: rgba($color: $danger, $alpha: 0.1);
+      }
+    }
+
+    .eventNone {
+      pointer-events: none;
+    }
+  }
+
+  .navigate {
+    color: $dark-green;
+    margin-top: 3rem;
+  }
+}
+.result {
+  display: none;
+
+  i {
+    color: $dark-green;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+  }
+  .buttons {
+    display: flex;
+
+    a {
+      padding: 0.25rem 1rem;
+      margin: 0 0.5rem;
+      background-color: $dark-green;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $white;
+      border-radius: 0.25rem;
+      -webkit-border-radius: 0.25rem;
+      -moz-border-radius: 0.25rem;
+      -ms-border-radius: 0.25rem;
+      -o-border-radius: 0.25rem;
+      transition: 300ms all ease-in-out;
+
+      &:hover {
+        background-color: $green;
+      }
+    }
+  }
+}
+
+.result-active {
+  display: flex;
+}
+.quiz-none {
+  display: none;
+}

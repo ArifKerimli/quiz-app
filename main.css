@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: #1e1e1e;
+  -webkit-transition: 300ms all ease-in-out;
+  transition: 300ms all ease-in-out;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+nav {
+  position: fixed;
+  width: 100vw;
+  z-index: 100;
+  background-color: #1e1e1e;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.01);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.01);
+}
+
+nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+}
+
+nav .container .logo {
+  color: #5fb371;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+nav .container ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+nav .container ul li {
+  width: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 0;
+}
+
+nav .container ul li a {
+  text-decoration: none;
+  color: #5fb371;
+  font-weight: 500;
+}
+
+nav .container .nav-underline {
+  width: 7rem;
+  height: 2px;
+  background-color: #5fb371;
+  transition: 300ms all ease-in-out;
+  -webkit-transition: 300ms all ease-in-out;
+  -moz-transition: 300ms all ease-in-out;
+  -ms-transition: 300ms all ease-in-out;
+  -o-transition: 300ms all ease-in-out;
+}
+
+nav .container .nav-underline-left {
+  transform: translateX(0rem);
+  -webkit-transform: translateX(0rem);
+  -moz-transform: translateX(0rem);
+  -ms-transform: translateX(0rem);
+  -o-transform: translateX(0rem);
+}
+
+nav .container .nav-underline-center {
+  transform: translateX(7rem);
+  -webkit-transform: translateX(7rem);
+  -moz-transform: translateX(7rem);
+  -ms-transform: translateX(7rem);
+  -o-transform: translateX(7rem);
+}
+
+nav .container .nav-underline-right {
+  -webkit-transform: translateX(14rem);
+          transform: translateX(14rem);
+}
+
+.home {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.home .home-left-side {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home .home-left-side h1 {
+  font-weight: 700;
+  color: #5fb371;
+  font-size: 4.25rem;
+}
+
+.home .home-left-side .text-animation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 600;
+  height: 7rem;
+  overflow: hidden;
+}
+
+.home .home-left-side .text-animation li {
+  line-height: 7rem;
+  animation: 6s change infinite steps(2);
+  -webkit-animation: 6s change infinite steps(2);
+}
+
+.home .home-left-side .text-animation li span {
+  color: #5fb371;
+}
+
+@-webkit-keyframes change {
+  to {
+    transform: translateY(-14rem);
+    -webkit-transform: translateY(-14rem);
+    -moz-transform: translateY(-14rem);
+    -ms-transform: translateY(-14rem);
+    -o-transform: translateY(-14rem);
+  }
+}
+
+@keyframes change {
+  to {
+    transform: translateY(-14rem);
+    -webkit-transform: translateY(-14rem);
+    -moz-transform: translateY(-14rem);
+    -ms-transform: translateY(-14rem);
+    -o-transform: translateY(-14rem);
+  }
+}
+
+.home .home-right-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .home-right-side img {
+  width: 30rem;
+  border-radius: 1rem;
+  border: 2px solid #5fb371;
+}
+
+.quizes {
+  padding: 9rem 0;
+  width: 100vw;
+  color: #5fb371;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.quizes h2 {
+  font-size: 3rem;
+}
+
+.quizes .html-quiz,
+.quizes .css-quiz,
+.quizes .js-quiz {
+  width: 100%;
+  height: 20rem;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #5fb371;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.quizes .html-quiz h3,
+.quizes .css-quiz h3,
+.quizes .js-quiz h3 {
+  font-size: 3rem;
+}
+
+.quizes .html-quiz p,
+.quizes .css-quiz p,
+.quizes .js-quiz p {
+  font-size: 1.3rem;
+}
+
+.quizes .html-quiz a,
+.quizes .css-quiz a,
+.quizes .js-quiz a {
+  padding: 0.5rem 2rem;
+  background-color: #5fb371;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  -webkit-transition: 300ms all ease-in-out;
+  transition: 300ms all ease-in-out;
+}
+
+.quizes .html-quiz a:hover,
+.quizes .css-quiz a:hover,
+.quizes .js-quiz a:hover {
+  background-color: #80cd91;
+}
+
+footer {
+  width: 100vw;
+  background-color: #5fb371;
+  color: #fff;
+  padding: 3rem 0;
+  margin-top: 9rem;
+}
+
+footer .container .col-md {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .container .col-md p {
+  margin: 0;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+}
+
+footer .container .col-md a {
+  color: #fff;
+}
+
+footer .container .col-md a i {
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+
+footer .container .col-md i {
+  padding: 1rem;
+}
+
+p.text-center {
+  color: #5fb371;
+  padding: 0.25rem 0;
+  margin: 0;
+}
+/*# sourceMappingURL=main.css.map */
