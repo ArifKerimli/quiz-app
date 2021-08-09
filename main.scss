@@ -1,0 +1,326 @@
+$dark: #1e1e1e;
+$light-gray: rgba(0, 0, 0, 0.03);
+$white: #fff;
+$green: #80cd91;
+$dark-green: #5fb371;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: $dark;
+  transition: 300ms all ease-in-out;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap");
+
+nav {
+  position: fixed;
+  width: 100vw;
+  z-index: 100;
+  background-color: $dark;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.01);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+
+    .logo {
+      color: $dark-green;
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      padding: 0;
+      margin: 0;
+
+      @media screen and(max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: -1;
+        transform: translateX(100%);
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70vw;
+        background-color: $dark-green;
+        transition: 300ms all ease-in-out;
+      }
+
+      li {
+        width: 7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 0;
+
+        @media screen and(max-width: 768px) {
+          padding: 3rem 0;
+        }
+
+        a {
+          text-decoration: none;
+          color: $dark-green;
+          font-weight: 500;
+
+          @media screen and(max-width: 768px) {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .nav-active {
+      transform: translateX(0);
+    }
+
+    .hamburger {
+      width: 1.5rem;
+      height: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media screen and(min-width:768px) {
+        display: none;
+      }
+      div {
+        margin: 0;
+        padding: 0;
+        height: 2px;
+        width: 100%;
+        background-color: $dark-green;
+        transition: 300ms all ease-in-out;
+      }
+    }
+    .toggle div {
+      background-color: $white;
+    }
+
+    .toggle .line-1 {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .toggle .line-2 {
+      opacity: 0;
+    }
+    .toggle .line-3 {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .nav-underline {
+      width: 7rem;
+      height: 2px;
+      background-color: $dark-green;
+      transition: 300ms all ease-in-out;
+      -webkit-transition: 300ms all ease-in-out;
+      -moz-transition: 300ms all ease-in-out;
+      -ms-transition: 300ms all ease-in-out;
+      -o-transition: 300ms all ease-in-out;
+
+      @media screen and(max-width: 768px) {
+        display: none;
+      }
+    }
+    .nav-underline-left {
+      transform: translateX(0rem);
+      -webkit-transform: translateX(0rem);
+      -moz-transform: translateX(0rem);
+      -ms-transform: translateX(0rem);
+      -o-transform: translateX(0rem);
+    }
+    .nav-underline-center {
+      transform: translateX(7rem);
+      -webkit-transform: translateX(7rem);
+      -moz-transform: translateX(7rem);
+      -ms-transform: translateX(7rem);
+      -o-transform: translateX(7rem);
+    }
+    .nav-underline-right {
+      transform: translateX(14rem);
+    }
+  }
+}
+
+.home {
+  min-height: 100vh;
+  width: 100vw;
+
+  .home-left-side {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      font-weight: 700;
+      color: $dark-green;
+      font-size: 4.25rem;
+
+      @media screen and(max-width: 728px) {
+        font-size: 4rem;
+      }
+      @media screen and(max-width: 525px) {
+        font-size: 3.75rem;
+      }
+    }
+
+    .text-animation {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 4rem;
+      font-weight: 600;
+      height: 7rem;
+      overflow: hidden;
+
+      @media screen and(max-width: 728px) {
+        font-size: 3.75rem;
+      }
+      @media screen and(max-width: 525px) {
+        font-size: 2.75rem;
+      }
+
+      li {
+        line-height: 7rem;
+        animation: 6s change infinite steps(2);
+        -webkit-animation: 6s change infinite steps(2);
+      }
+
+      li span {
+        color: $dark-green;
+      }
+
+      @keyframes change {
+        to {
+          transform: translateY(-14rem);
+          -webkit-transform: translateY(-14rem);
+          -moz-transform: translateY(-14rem);
+          -ms-transform: translateY(-14rem);
+          -o-transform: translateY(-14rem);
+        }
+      }
+    }
+  }
+
+  .home-right-side {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    img {
+      width: 30rem;
+      border-radius: 1rem;
+      border: 2px solid $dark-green;
+
+      @media screen and(max-width: 525px) {
+        width: 20rem;
+      }
+    }
+  }
+}
+
+.quizes {
+  padding: 9rem 0;
+  width: 100vw;
+  color: $dark-green;
+  display: flex;
+  align-items: center;
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .html-quiz,
+  .css-quiz,
+  .js-quiz {
+    width: 100%;
+    height: 20rem;
+    border-radius: 1rem;
+    background-color: $light-gray;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $dark-green;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+
+    h3 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+    a {
+      padding: 0.5rem 2rem;
+      background-color: $dark-green;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $white;
+      border-radius: 0.25rem;
+      -webkit-border-radius: 0.25rem;
+      -moz-border-radius: 0.25rem;
+      -ms-border-radius: 0.25rem;
+      -o-border-radius: 0.25rem;
+      transition: 300ms all ease-in-out;
+
+      &:hover {
+        background-color: $green;
+      }
+    }
+  }
+}
+
+footer {
+  width: 100vw;
+  background-color: $dark-green;
+  color: $white;
+  padding: 3rem 0;
+  margin-top: 9rem;
+
+  .container {
+    .col-md {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        margin: 0;
+        padding: 1rem 0;
+        font-size: 1.1rem;
+      }
+      a {
+        color: $white;
+
+        i {
+          padding: 1rem;
+          font-size: 1.3rem;
+        }
+      }
+      i {
+        padding: 1rem;
+      }
+    }
+  }
+}
+p.text-center {
+  color: $dark-green;
+  padding: 0.25rem 0;
+  margin: 0;
+}
